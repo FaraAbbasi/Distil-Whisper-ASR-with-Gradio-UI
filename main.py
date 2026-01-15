@@ -15,11 +15,7 @@ If you would like to run this code on your own machine, you can install the foll
 # !pip install gradio
 
 """
-Creates an ASR pipeline with two key parameters:
-
-task="automatic-speech-recognition" - Specifies this is for converting speech to text
-
-model="distil-whisper/distil-small.en" - Uses a distilled version of OpenAI's Whisper model optimized for English
+Model Initializing 
 """
 
 from transformers import pipeline
@@ -29,11 +25,6 @@ asr = pipeline(task="automatic-speech-recognition",     # Specifies this is for 
 
 """
 Transcribing The Audio
-Transcribe audio file to text using speech recognition model.
-
-Arguments: filepath: Path to audio file (e.g., .mp3, .wav)
-
-Returns: string: Transcribed text or empty string if error occurs
 """
 
 import os
@@ -52,7 +43,6 @@ def transcribe_speech(filepath):
 
 """
 Build a shareable app with Gradio
-This code creates a Gradio web interface for live microphone speech transcription.
 """
 
 import gradio as gr       #  Imports Gradio - a library for creating web UIs for ML models
