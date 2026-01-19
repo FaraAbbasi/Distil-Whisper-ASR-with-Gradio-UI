@@ -1,7 +1,7 @@
 transformers
 gradio
-torch
 soundfile
+torch
 numpy
 ipykernel
 openpyxl

@@ -1,5 +1,4 @@
 # Distil Whisper ASR with Gradio UI
-
 A lightweight web interface for speech-to-text transcription using the Distil-Whisper model, optimized for English speech recognition. This project uses Gradio to provide an interactive UI for real-time microphone input and file upload transcription.
 
 ## Features
@@ -16,45 +15,51 @@ A lightweight web interface for speech-to-text transcription using the Distil-Wh
 
 ## 🚀Quick Start
 
-### Installation
+### 1st Method (Recommended)
 
-Clone the repository and install the required dependencies:
+#### Installation by creating a python virtual enviroment
+
+To setup a python virtual environment to run the application follow these steps:
 
 ```bash
-git clone https://github.com/FaraAbbasi/Distil-Whisper-ASR-with-Gradio-UI.git
-cd Distil-Whisper-ASR-with-Gradio-UI
+# create a new virtual environment
+python -m venv .venv 
+
+# Activate the virtual environment in windows using gitbash
+source .venv/Scripts/activate
+
+# Install required packages 
 pip install -r requirements.txt
-```
 
-### Dependencies
-
-The main dependencies are:
-
-* transformers
-* gradio
-* torch (optional, for GPU support)
-
-You can install them manually:
-
-```bash
-pip install transformers gradio
-```
-
-### Running the App
-
-Start the Gradio interface with:
-
-```bash
+# Running the application
 python app.py
+
+# Then open the provided public URL in your browser.
 ```
 
-Then open the provided public URL in your browser.
+### 2nd Method
+
+```bash
+# Clone the repository
+git clone https://github.com/FaraAbbasi/Distil-Whisper-ASR-with-Gradio-UI.git
+
+# Change the current directory
+cd Distil-Whisper-ASR-with-Gradio-UI
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Running the App
+python app.py
+
+# Then open the provided public URL in your browser.
+```
 
 ## How It Works
 
 ### Model Initialization
 
-```Python
+```python
 from transformers import pipeline
 # Initialize the ASR pipeline with distil-whisper
 asr = pipeline(
@@ -79,7 +84,7 @@ The system:
 
 ### Transcription Function
 
-```Python
+```python
 def transcribe_speech(filepath):
     output = asr(filepath,
                  batch_size=8,           # Process 8 chunks simultaneously
@@ -149,7 +154,7 @@ max_new_tokens | 256 | Limits transcription to ~200-300 words per chunk
 
 ## Example
 
-```Python
+```python
 from transformers import pipeline
 
 asr_pipeline = pipeline("automatic-speech-recognition", model="distil-whisper/distil-multimix")
@@ -181,6 +186,22 @@ This project is open-source and available under the MIT License.
 ## Contributing
 
 Contributions are warmly welcomed! This project thrives on community input and collaboration. We encourage you to participate in making it better, whether through bug reports, feature suggestions, or direct code contributions.
+
+## Support
+
+For issues and questions:
+
+1. Check the [FAQ section](#frequently-asked-questions)
+
+1. Open an Issue on GitHub
+
+2. Provide detailed information about your problem
+
+----
+<div align="center"> Made with ❤️ for the open-source community
+Give a ⭐ if you find this project useful!
+
+</div>
 
 ## ❓Frequently Asked Questions
 
