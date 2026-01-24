@@ -22,6 +22,12 @@ A lightweight web interface for speech-to-text transcription using the Distil-Wh
 To setup a python virtual environment to run the application follow these steps:
 
 ```bash
+# Clone the repository
+git clone https://github.com/FaraAbbasi/Distil-Whisper-ASR-with-Gradio-UI.git
+
+# Change the current directory
+cd Distil-Whisper-ASR-with-Gradio-UI
+
 # create a new virtual environment
 python -m venv .venv 
 
